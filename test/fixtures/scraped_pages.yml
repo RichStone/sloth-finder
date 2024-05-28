@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rubyweekly1:
+  url: https://www.rubyweekly.com/issues/1
+  body: <body>Good body</body>
+
+two:
+  url: https://www.rubyweekly.com/issues/2
+  body: <body>Better body</body>
