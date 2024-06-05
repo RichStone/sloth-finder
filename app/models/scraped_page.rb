@@ -6,7 +6,7 @@ class ScrapedPage < ApplicationRecord
 
     regex = /\b(#{keywords.join('|')})\b/i
     doc = Nokogiri::HTML(body)
-    texts = doc.xpath('//p | //a | //div').map(&:text).map(&:strip).uniq
+    texts = doc.xpath('//p | //a | //div[not(child::*)]').map(&:text).map(&:strip).uniq
 
     matches = texts.select { |text| text.match?(regex) }
 
