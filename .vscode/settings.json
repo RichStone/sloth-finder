@@ -1,0 +1,15 @@
+{
+  "standardRuby.autofix": true,
+  "editor.formatOnSave": true, // Format files automatically when saving
+  "rubyLsp.formatter": "none",
+  "rubyLsp.rubyVersionManager": {
+    "identifier": "rbenv"
+  },
+  "[ruby]": {
+    "editor.tabSize": 2, // Use 2 spaces for indentation
+    "editor.insertSpaces": true, // Use spaces and not tabs for indentantion
+    "editor.semanticHighlighting.enabled": true, // Enable semantic highlighting
+    "editor.formatOnType": true, // Enable formatting while typing
+    "editor.defaultFormatter": "testdouble.vscode-standard-ruby"
+  },
+}
