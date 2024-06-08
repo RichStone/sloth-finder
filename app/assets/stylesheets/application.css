@@ -20,9 +20,12 @@ body {
   color: #333;
   margin: 0;
   padding: 20px;
+  text-align: center;
+  font-size: 18px;
 }
 
-h1 {
+h1,
+h2 {
   color: #ff6b6b;
   text-shadow: 2px 2px #ffe66d;
 }
@@ -31,11 +34,23 @@ form {
   margin-bottom: 20px;
 }
 
+.keywords-label {
+  font-weight: bold;
+  font-size: 18px;
+  color: #4ecdc4;
+  display: block;
+  margin-bottom: 10px;
+}
+
 input[type="text"] {
   padding: 10px;
   font-size: 16px;
   border: 2px solid #4ecdc4;
   border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
 }
 
 input[type="submit"] {
@@ -46,6 +61,8 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 #results {
@@ -53,6 +70,8 @@ input[type="submit"] {
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
 .result-card {
@@ -62,6 +81,7 @@ input[type="submit"] {
   padding: 20px;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
+  text-align: left;
 }
 
 .result-card:hover {
@@ -70,4 +90,69 @@ input[type="submit"] {
 
 .result-card p {
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 1024px;
+  margin: 30px auto;
+}
+
+li {
+  background-color: #fff8dc;
+  border: 2px solid #ffe66d;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  position: relative;
+  padding-left: 40px;
+}
+
+li.emoji-search::before {
+  content: "🔍";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+li.emoji-slow::before {
+  content: "🦥";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+li.emoji-tests::before {
+  content: "🧪";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+li.emoji-rails::before {
+  content: "🚂";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+li.emoji-claude::before {
+  content: "🤖";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .result-card {
+    width: 75%;
+    margin: 0 auto 20px;
+  }
 }

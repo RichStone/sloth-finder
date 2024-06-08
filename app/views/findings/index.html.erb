@@ -5,19 +5,19 @@
   Ruby and Rails topics for the past decade.
 </p>
 
-<p>What makes it Sloth?</p>
+<h2>What makes it Sloth?</h2>
 
 <ul>
-  <li>It's the laziest search ever invented (we are looking for case insensitive words with open ends; e.g. "api" will match "API", "APIs", "apimatic")</li>
-  <li>It's slow: I've seen loading times for about 1-2 seconds. Chill out bro.</li>
-  <li>Written with the laziest tech stack ever imagined: Rails on SQlite ("sqlite" is a great keyword to have Findings for, by the way).</li>
-  <li>Frontend "design" outsourced to Claude Opus.</li>
-  <li>Obviously, no one wrote tests for this simple MVP.</li>
+  <li class="emoji-search">It's the laziest search ever invented (we are looking for case insensitive words with open ends; e.g. "api" will match "API", "APIs", "apimatic")</li>
+  <li class="emoji-slow">It's slow: Loading times have been spotted to be around 1-2 seconds. Chill is king; good things take time.</li>
+  <li class="emoji-rails">Written with the laziest tech stack ever imagined: Rails on SQlite ("sqlite" is a great keyword to have Findings for, by the way).</li>
+  <li class="emoji-claude">Frontend "design" outsourced to Claude Opus.</li>
+  <li class="emoji-tests">Obviously, no one wrote tests for this simple MVP (the Sloth promised adding some, if it gets extended).</li>
 </ul>
 
 <%= form_with url: findings_path, method: :post do |form| %>
-  <%= form.label :keywords %>
-  <%= form.text_field :keywords %>
+  <%= form.label :keywords, class: "keywords-label" %>
+  <%= form.text_field :keywords, placeholder: "comma-separated keywords or phrases" %>
   <%= form.submit "Find 🦥" %>
 <% end %>
 
