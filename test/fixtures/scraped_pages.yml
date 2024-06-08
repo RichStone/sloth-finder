@@ -2,8 +2,8 @@
 
 rubyweekly1:
   url: https://www.rubyweekly.com/issues/1
-  body: <body>Good body</body>
+  body: <body><div>Ruby APIs are the only thing that matters.</div></body>
 
 two:
   url: https://www.rubyweekly.com/issues/2
-  body: <body>Better body</body>
+  body: <body><div>But sometimes you need to do things in the UI, too.</div></body>

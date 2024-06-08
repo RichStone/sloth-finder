@@ -1,0 +1,26 @@
+<h1>Sloth Finder - Ruby Weekly edition</h1>
+
+<p>
+  Sloth Finder helps you detect the most amazing Ruby articles around your favorite
+  Ruby and Rails topics for the past decade.
+</p>
+
+<p>Why?</p>
+
+<ul>
+  <li>It's the laziest search ever invented (we are looking for case insensitive words with open ends; e.g. "api" will match "API", "APIs", "apimatic")</li>
+  <li>It's slow: I've seen loading times for about 1-2 seconds. Chill out bro.</li>
+  <li>Written with the laziest tech stack ever imagined: Rails on SQlite ("sqlite" is a great keyword to have Findings for, by the way).</li>
+  <li>Co-designed by Claude Opus.</li>
+  <li>Obviously, no one wrote tests for this simple MVP.</li>
+</ul>
+
+<%= form_with url: findings_path, method: :post do |form| %>
+  <%= form.label :keywords %>
+  <%= form.text_field :keywords %>
+  <%= form.submit "Find 🦥" %>
+<% end %>
+
+<div id="results">
+  <%= render "results", results: @results || [] %>
+</div>

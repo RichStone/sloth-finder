@@ -1,8 +1,8 @@
-class SearchController < ApplicationController
+class FindingsController < ApplicationController
   def index
   end
 
-  def search
+  def create
     keywords = params[:keywords].split(",").map(&:strip)
     finder = Finder.new(keywords: keywords)
     @results = finder.find_matches
