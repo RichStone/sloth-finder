@@ -1,0 +1,10 @@
+<% if results.present? %>
+  <h2>Search Results</h2>
+  <% results.each do |result| %>
+    <div>
+      <p><%= result[:related_texts] %></p>
+    </div>
+  <% end %>
+<% else %>
+  <p>No results yet.</p>
+<% end %>

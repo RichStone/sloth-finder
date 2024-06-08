@@ -1,6 +1,28 @@
+# This class' name could also be Sloth.
 class Finder
   attr_writer :keywords, :first, :last
 
+  def find_matches
+    ScraperLogger.logger.info "🔎 Searching for keywords: #{@keywords.join(", ")}"
+
+    scope = ScrapedPage.all
+    scope = scope.first(@first) if @first
+    scope = scope.last(@last) if @last
+
+    results = []
+    scope.each do |page|
+      result = page.keyword_mentions(keywords: @keywords)
+      if result
+        results << result
+      end
+    end
+
+    ScraperLogger.logger.info "Found #{results.size} matches 🔍"
+
+    results
+  end
+
+  # This is useful when you run things locally.
   def find_and_log
     ScraperLogger.logger.info "Searching for keywords"
 
@@ -31,7 +53,7 @@ class Finder
   # first - Integer, the number of pages to search through
   # last - Integer, the number of pages to search through
   def initialize(keywords:, first: nil, last: nil)
-    ScraperLogger.logger.info "Initialize logger for #{keywords.join(", ")}"
+    ScraperLogger.logger.info "Initialize logger for keywords: #{keywords.join(", ")}"
 
     @keywords = keywords
     @first = first

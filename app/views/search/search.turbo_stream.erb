@@ -1,0 +1,7 @@
+<%= turbo_stream.replace "results" do %>
+  <div id="results">
+    <h1>Search Results</h1>
+    <p>Random Number: <%= rand(100) %></p>
+    <%= render 'results', results: @results || [] %>
+  </div>
+<% end %>
