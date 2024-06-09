@@ -19,7 +19,7 @@ body {
   background-color: #f0f8ff;
   color: #333;
   margin: 0;
-  padding: 20px;
+  padding: 20px 20px 80px 20px;
   text-align: center;
   font-size: 18px;
 }
@@ -155,4 +155,29 @@ li.emoji-claude::before {
     width: 75%;
     margin: 0 auto 20px;
   }
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+  border-top: 1px solid #e9ecef;
+  margin-top: 40px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
