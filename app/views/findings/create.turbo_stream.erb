@@ -1,6 +1,6 @@
 <%= turbo_stream.replace "results" do %>
   <div id="results">
-    <h1>Findings...</h1>
+    <h1><%= "#{@results.count} findings..." %></h1>
     <%= render "results", results: @results || [] %>
   </div>
 <% end %>

@@ -2,6 +2,7 @@
   <% results.each do |result| %>
     <div class="result-card">
       <p><%= result[:related_texts] %></p>
+      <p><%= link_to result[:url], result[:url], target: "_blank" %></p>
     </div>
   <% end %>
   <div>

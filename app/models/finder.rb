@@ -13,13 +13,14 @@ class Finder
     scope.each do |page|
       result = page.keyword_mentions(keywords: @keywords)
       if result
+        result[:url] = page.url
         results << result
       end
     end
 
     ScraperLogger.logger.info "Found #{results.size} matches 🔍"
 
-    results
+    results.reverse
   end
 
   # This is useful when you run things locally.
