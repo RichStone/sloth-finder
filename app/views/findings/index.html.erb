@@ -17,10 +17,18 @@
 
 <%= form_with url: findings_path, method: :post do |form| %>
   <%= form.label :keywords, class: "keywords-label" %>
-  <%= form.text_field :keywords, placeholder: "comma-separated keywords or phrases" %>
+  <%= form.text_field "findings[keywords]", placeholder: "comma-separated keywords or phrases" %>
   <%= form.submit "Find 🦥" %>
 <% end %>
 
 <div id="results">
+    <%# Necessary to display the flash alert in the turbo stream, otherwise it's %>
+    <%# hard to make it to behave properly (e.g., does not disappear when search is triggered). %>
+    <%# Leads to poor UX, where the alert is shown instead of the previous results. %>
+    <% if flash.alert %>
+      <div class="alert alert-danger">
+        <%= flash.alert %>
+      </div>
+    <% end %>
   <%= render "results", results: @results || [] %>
 </div>

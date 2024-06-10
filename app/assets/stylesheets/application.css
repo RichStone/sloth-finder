@@ -157,6 +157,21 @@ li.emoji-claude::before {
   }
 }
 
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  max-width: 1024px;
+  margin: 20px auto;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
 footer {
   background-color: #f8f9fa;
   padding: 10px;
