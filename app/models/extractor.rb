@@ -8,3 +8,5 @@
 # description, author, and a link for further reading. look through the whole document and all
 # sections to find any mentions of the above mentioned keywords:
 # ...html...
+class Extractor
+end
