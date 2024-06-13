@@ -118,8 +118,16 @@ li.emoji-search::before {
   transform: translateY(-50%);
 }
 
-li.emoji-slow::before {
+li.emoji-sloth::before {
   content: "🦥";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+li.emoji-slow::before {
+  content: "🐌";
   position: absolute;
   left: 10px;
   top: 50%;
