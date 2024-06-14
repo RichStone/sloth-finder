@@ -5,6 +5,9 @@ class FindingsController < ApplicationController
   def create
     keywords = sanitize_keywords(findings_params[:keywords])
 
+    # We don't store findings yet so just logging for fun and insights:
+    logger.info("SESSION #{session.id} searched for #{keywords}")
+
     if keywords.empty?
       flash.now.alert = "Please enter at least one keyword."
       render :index, status: :unprocessable_entity
