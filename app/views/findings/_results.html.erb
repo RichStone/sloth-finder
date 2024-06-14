@@ -1,13 +1,13 @@
 <% if results.present? %>
   <% results.each do |result| %>
     <div class="result-card">
-      <p><%= result[:related_texts] %></p>
+      <p><%= result[:related_texts].gsub(/\n\n/, "<br/><br/>").html_safe %></p>
       <p><%= link_to result[:url], result[:url], target: "_blank" %></p>
     </div>
   <% end %>
   <div>
-    <p>🦥 Seek the truth and ye shall find</p>
+    <p class="sloth-fact">🦥 Seek the truth and ye shall find</p>
   </div>
 <% else %>
-  <p><%= sloth_facts.sample %></p>
+  <p class="sloth-fact"><%= sloth_facts.sample %></p>
 <% end %>
