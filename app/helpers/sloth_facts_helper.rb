@@ -12,7 +12,8 @@ module SlothFactsHelper
       "🦥 Maybe tomorrow...",
       "🦥 Sloths have a mutualistic ectosymbiotic relationship with the flora and fauna growing on their backs, consisting of fungi, algae, and moths.",
       "🦥 Sloths are two- or three-toed. To look better, they have four toes in Zootopia DALL-E style.",
-      "🦥 I go 240 metres per hour. You just sit."
+      "🦥 I go 240 metres per hour. You just sit.",
+      "🦥 I'm a vegan, preferring to eat leaves and sometimes fruit, insects, lizards, and bird's eggs. Nothing too fancy."
     ]
   end
 end

@@ -11,7 +11,7 @@ class ScrapedPage < ApplicationRecord
     matches = texts.select { |text| text.match?(regex) }
 
     if matches.any?
-      related_texts = matches.join("\n\n")
+      related_texts = matches.reverse.join("\n\n")
       {related_texts: related_texts}
     end
   end

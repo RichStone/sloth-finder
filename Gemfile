@@ -47,6 +47,12 @@ gem "bootsnap", require: false
 # To make the HTTP requests.
 gem "httparty"
 
+# Profiling needs to come before Sentry gems.
+gem "stackprof"
+# Error tracking.
+gem "sentry-ruby", ">= 5.17.0"
+gem "sentry-rails"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows]
@@ -58,6 +64,8 @@ group :development, :test do
   # Also see test env below.
   gem "ruby-lsp"
   gem "ruby-lsp-rails"
+
+  gem "dotenv-rails"
 end
 
 group :development do

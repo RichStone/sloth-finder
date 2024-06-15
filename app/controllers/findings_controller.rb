@@ -9,9 +9,13 @@ class FindingsController < ApplicationController
     logger.info("SESSION #{session.id} searched for #{keywords}")
 
     if keywords.empty?
+      Sentry::Metrics.increment("something_found")
+
       flash.now.alert = "Please enter at least one keyword."
       render :index, status: :unprocessable_entity
     else
+      Sentry::Metrics.increment("nothing_found")
+
       finder = Finder.new(keywords: keywords)
       @results = finder.find_matches
       @results.reverse
