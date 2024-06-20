@@ -1,5 +1,5 @@
-require 'httparty'
-require 'nokogiri'
+require "httparty"
+require "nokogiri"
 
 class SimpleScraper
   def initialize(base_url, from: 1, to: 10)
@@ -34,13 +34,13 @@ class SimpleScraper
       sleep 1
     end
 
-    puts "Crawling finished with #{ScrapedPage.count} pages"
+    puts "Crawling finished with #{ScrapedPage.count} pages now available"
   end
 
   def scrape(page_content, url)
     # Parse the HTML and extract the <body> element including the tag
     parsed_page = Nokogiri::HTML(page_content)
-    body_content = parsed_page.at('body').to_html
+    body_content = parsed_page.at("body").to_html
 
     # Find or initialize the ScrapedPage record and update the body
     scraped_page = ScrapedPage.find_or_initialize_by(url: url)
