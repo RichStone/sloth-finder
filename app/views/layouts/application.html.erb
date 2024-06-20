@@ -9,6 +9,16 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Search Ruby Weekly articles like a Sloth">
+    <meta property="og:description" content="The search for the Ruby Weekly newsletter.">
+    <meta property="og:image" content="<%= asset_path("rich-sloth.png") %>">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Search Ruby Weekly articles like a Sloth">
+    <meta name="twitter:description" content="The search for the Ruby Weekly newsletter.">
+    <meta name="twitter:image" content="<%= asset_path("rich-sloth.png") %>">
   </head>
 
   <body>
