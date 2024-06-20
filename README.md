@@ -1,6 +1,8 @@
 # Sloth Finder
 
-Scrape and search Ruby weekly. And maybe more someday. Slowly but steadily. 
+Scrape and search Ruby weekly. And maybe more someday. Slowly but steadily.
+
+https://slothfinder.apishop.io/
 
 <div align="center">
   <kbd>
