@@ -4,11 +4,8 @@ Scrape and search Ruby weekly. And maybe more someday. Slowly but steadily.
 
 https://slothfinder.apishop.io/
 
-<div align="center">
-  <kbd>
-    <img width=400 src="https://slothfinder.apishop.io/assets/rich-sloth-f6511538d4d280f6ecf9f666c4034bdedc54c308fcc487d76cca81e67f251207.png" />
-  </kbd>
-</div>
+<img width="450" alt="Screenshot 2024-06-21 at 20 25 02" src="https://github.com/RichStone/sloth-finder/assets/15954169/bc5c7272-afc1-4962-93f5-6b7c4e0cd5d6">
+
 
 ### Built on
 
